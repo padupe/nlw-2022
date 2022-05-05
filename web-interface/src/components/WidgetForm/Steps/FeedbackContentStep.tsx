@@ -1,4 +1,4 @@
-import { ArrowLeft, Camera } from "phosphor-react";
+import { ArrowLeft } from "phosphor-react";
 import { FormEvent, useState } from "react";
 import { FeedbackType, feedbackTypes } from ".."
 import { CloseButton } from "../../CloseButton"
@@ -18,13 +18,9 @@ export function FeedbackContentStep({feedbackType, onFeedbackRestartRequested, o
     const feedbackTypeInfo = feedbackTypes[feedbackType]
 
     function handleSubmitFeedback(event: FormEvent) {
-
         event.preventDefault()
 
-        console.log({
-            screenshot,
-            comment
-        })
+        console.log(screenshot, comment)
 
         onFeedbackSent()
     }
@@ -37,6 +33,7 @@ export function FeedbackContentStep({feedbackType, onFeedbackRestartRequested, o
                 <button type="button"
                         className="top-5 left-5 absolute text-zinc-400 hover:text-zinc-100"
                         onClick={onFeedbackRestartRequested}
+                        title="Voltar"
                 >
                     <ArrowLeft weight="bold" className="w-4 h-4" />
                 </button>
@@ -53,7 +50,7 @@ export function FeedbackContentStep({feedbackType, onFeedbackRestartRequested, o
                 <textarea 
                     className="min-w[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 bg-transparent rounded-md focus:border-brand_color-500 focus:ring-brand_color-500 focus:ring-1 focus:outline-none resize-none scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin"
                     placeholder="Conte com detalhes o que está acontecendo..."
-                    onChange={event => setComment(event.target.value)}
+                    onChange={(event) => setComment(event.target.value)}
                 />
 
                 <footer className="flex gap-2 mt-2">
