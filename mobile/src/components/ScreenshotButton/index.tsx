@@ -20,7 +20,8 @@ export function ScreenshotButton({ screenshot, onTakeShot, onRemoveShot }: Props
       {
         screenshot
         ?
-        <View>
+        (
+          <View>
           <Image
             style={styles.image}
             source={{ uri: screenshot }}
@@ -33,12 +34,15 @@ export function ScreenshotButton({ screenshot, onTakeShot, onRemoveShot }: Props
             style={styles.removeIcon}
           />
         </View>
+        )
         :
-        <Camera
+        (
+          <Camera
           size={24}
           color={theme.colors.text_secondary}
           weight="bold"
         />
+        )
       }
     </TouchableOpacity>
   );
