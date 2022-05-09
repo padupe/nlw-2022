@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "ts-node-dev src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "px prisma migrate deploy && node dist/server.js",
     "test": "NODE_ENV=test jest --runInBand --detectOpenHandles"
   },
   "devDependencies": {
