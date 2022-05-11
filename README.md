@@ -23,5 +23,5 @@ SOLID concepts were applied, and the ORM Prisma was used for integration with th
 
 ## Using App
 <div align="center">
-      <img align="center" alt="Using-App" src="https://github.com/padupe/nlw-2022/blob/master/assets/using-app.gif">     
+      <img align="center" alt="Using-App" src="https://github.com/padupe/nlw-2022/blob/main/assets/using-app.gif">     
 </div>
